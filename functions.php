@@ -25,3 +25,19 @@ add_action(
     'wp_enqueue_scripts',
     'nova_agency_enqueue_assets'
 );
+
+
+function nova_agency_register_menus() {
+    register_nav_menus(
+        array(
+            'primary-menu' => 'Primary Menu',
+             'footer-menu'  => 'Footer Menu'
+
+        )
+    );
+}
+
+add_action(
+    'after_setup_theme',
+    'nova_agency_register_menus'
+);
