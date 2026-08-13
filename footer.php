@@ -26,6 +26,10 @@
 </nav>
 
     </div>
+
+    <button class="back-to-top" aria-label="Back to top">
+    ↑
+</button>
 </footer>
 
 <?php wp_footer(); ?>
