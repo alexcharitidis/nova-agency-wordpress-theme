@@ -41,3 +41,43 @@ add_action(
     'after_setup_theme',
     'nova_agency_register_menus'
 );
+
+
+
+
+function nova_agency_register_projects() {
+
+    register_post_type(
+        'project',
+        array(
+            'labels' => array(
+                'name'          => 'Projects',
+                'singular_name' => 'Project'
+            ),
+            'public'      => true,
+            'has_archive' => true,
+            'supports'    => array(
+                'title',
+                'editor',
+                'thumbnail'
+            )
+        )
+    );
+}
+
+add_action(
+    'init',
+    'nova_agency_register_projects'
+);
+
+
+
+
+function nova_agency_theme_setup() {
+    add_theme_support('post-thumbnails');
+}
+
+add_action(
+    'after_setup_theme',
+    'nova_agency_theme_setup'
+);

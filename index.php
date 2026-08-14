@@ -107,35 +107,49 @@
 
         <div class="projects-grid">
 
-            <article class="project-card">
-                <div class="project-image"></div>
+    <?php
 
-                <div class="project-content">
-                    <h3>Business Website</h3>
-                    <p>Web Development</p>
-                </div>
-            </article>
+    $projects_query = new WP_Query(
+        array(
+            'post_type'      => 'project',
+            'posts_per_page' => 3
+        )
+    );
 
-            <article class="project-card">
-                <div class="project-image"></div>
+    if ( $projects_query->have_posts() ) :
 
-                <div class="project-content">
-                    <h3>E-commerce Platform</h3>
-                    <p>Web Development & SEO</p>
-                </div>
-            </article>
+        while ( $projects_query->have_posts() ) :
+            $projects_query->the_post();
+            ?>
 
             <article class="project-card">
-                <div class="project-image"></div>
+
+                <div class="project-image">
+                    <?php
+                    if ( has_post_thumbnail() ) {
+                        the_post_thumbnail('large');
+                    }
+                    ?>
+                </div>
 
                 <div class="project-content">
-                    <h3>Digital Campaign</h3>
-                    <p>Digital Strategy</p>
+                    <h3><?php the_title(); ?></h3>
+
+                    <p><?php the_excerpt(); ?></p>
                 </div>
+
             </article>
 
-        </div>
+            <?php
+        endwhile;
 
+        wp_reset_postdata();
+
+    endif;
+
+    ?>
+
+</div>
     </div>
 </section>
 
