@@ -6,16 +6,15 @@
         <div class="hero-container">
 
             <div class="hero-content">
-                <h1>We build digital experiences that grow businesses.</h1>
+                    <h1><?php the_field('hero_title'); ?></h1>
 
-                <p>
-                    Nova Digital helps businesses create modern websites
-                    and effective digital solutions.
-                </p>
+                    <p>
+                        <?php the_field('hero_description'); ?>
+                    </p>
 
-                <a href="#" class="hero-button">
-                    View Our Work
-                </a>
+                    <a href="<?php the_field('hero_button_link'); ?>" class="hero-button">
+                        <?php the_field('hero_button_text'); ?>
+                    </a>
             </div>
 
         </div>
@@ -25,34 +24,31 @@
     <div class="services-container">
 
         <div class="section-heading">
-            <p>Our Services</p>
-            <h2>What we can do for your business</h2>
+            <p><?php the_field('services_label'); ?></p>
+            <h2><?php the_field('services_title'); ?></h2>
         </div>
 
         <div class="services-grid">
 
             <article class="service-card">
-                <h3>Web Development</h3>
-                <p>
-                    Modern and responsive websites built for your business.
-                </p>
+                <h3><?php the_field('service_1_title'); ?></h3>
+                <p><?php the_field('service_1_description'); ?></p>
             </article>
 
             <article class="service-card">
-                <h3>SEO</h3>
-                <p>
-                    Improve your website's visibility and reach more customers.
-                </p>
+                <h3><?php the_field('service_2_title'); ?></h3>
+                <p><?php the_field('service_2_description'); ?></p>
             </article>
 
             <article class="service-card">
-                <h3>Digital Strategy</h3>
-                <p>
-                    Digital solutions designed around your business goals.
-                </p>
+                <h3><?php the_field('service_3_title'); ?></h3>
+                <p><?php the_field('service_3_description'); ?></p>
             </article>
 
         </div>
+
+    </div>
+</section>
 
 
 
@@ -60,40 +56,46 @@
     <div class="about-container">
 
         <div class="about-content">
-            <p class="section-label">About Us</p>
 
-            <h2>We create digital solutions with purpose.</h2>
-
-            <p>
-                We help businesses build a strong digital presence through
-                modern web development, SEO and digital strategy.
+            <p class="section-label">
+                <?php the_field('about_label'); ?>
             </p>
 
-            <a href="#" class="about-link">Learn More About Us</a>
+            <h2><?php the_field('about_title'); ?></h2>
+
+            <p>
+                <?php the_field('about_description'); ?>
+            </p>
+
+            <a href="<?php the_field('about_button_link'); ?>" class="about-link">
+                <?php the_field('about_button_text'); ?>
+            </a>
+
         </div>
 
         <div class="about-stats">
+
             <div class="stat">
-                <strong>20+</strong>
-                <span>Projects Completed</span>
+                <strong><?php the_field('stat_1_number'); ?></strong>
+                <span><?php the_field('stat_1_label'); ?></span>
             </div>
 
             <div class="stat">
-                <strong>10+</strong>
-                <span>Happy Clients</span>
+                <strong><?php the_field('stat_2_number'); ?></strong>
+                <span><?php the_field('stat_2_label'); ?></span>
             </div>
 
             <div class="stat">
-                <strong>3+</strong>
-                <span>Years Experience</span>
+                <strong><?php the_field('stat_3_number'); ?></strong>
+                <span><?php the_field('stat_3_label'); ?></span>
             </div>
+
         </div>
 
     </div>
 </section>
 
-    </section>
-
+    
 
 <section class="projects-section">
     <div class="projects-container">
@@ -140,14 +142,14 @@
 <section class="cta-section">
     <div class="cta-container">
 
-        <h2>Ready to grow your business?</h2>
+        <h2><?php the_field('cta_title'); ?></h2>
 
         <p>
-            Let's build something great together.
+            <?php the_field('cta_description'); ?>
         </p>
 
-        <a href="#" class="cta-button">
-            Get in Touch
+        <a href="<?php the_field('cta_button_link'); ?>" class="cta-button">
+            <?php the_field('cta_button_text'); ?>
         </a>
 
     </div>
