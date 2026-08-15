@@ -3,8 +3,14 @@
     <div class="footer-container">
 
         <div class="footer-branding">
-            <?php bloginfo('name'); ?>
-        </div>
+    <a href="<?php echo esc_url( home_url('/') ); ?>">
+        <img
+            src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/footer-logo.png' ); ?>"
+            alt="<?php bloginfo('name'); ?>"
+            class="footer-logo"
+        >
+    </a>
+</div>
 
          <div class="footer-bottom">
             <p>

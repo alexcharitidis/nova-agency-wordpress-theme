@@ -6,10 +6,12 @@
 
         <?php while ( have_posts() ) : the_post(); ?>
 
-            <article>
-                <h2><?php the_title(); ?></h2>
+            <article class="page-content">
 
-                <?php the_excerpt(); ?>
+                <h1><?php the_title(); ?></h1>
+
+                <?php the_content(); ?>
+
             </article>
 
         <?php endwhile; ?>

@@ -54,8 +54,11 @@ function nova_agency_register_projects() {
                 'name'          => 'Projects',
                 'singular_name' => 'Project'
             ),
-            'public'      => true,
-            'has_archive' => true,
+             'public'      => true,
+        'has_archive' => 'projects',
+        'rewrite'     => array(
+            'slug' => 'projects'
+        ),
             'supports'    => array(
                 'title',
                 'editor',
@@ -75,6 +78,7 @@ add_action(
 
 function nova_agency_theme_setup() {
     add_theme_support('post-thumbnails');
+    add_theme_support('custom-logo');
 }
 
 add_action(
