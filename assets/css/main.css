@@ -9,6 +9,8 @@ body {
 }
 
 
+/* Header */
+
 .site-header {
     width: 100%;
     padding: 20px 0;
@@ -24,37 +26,9 @@ body {
     padding: 0 20px;
 }
 
-
 .custom-logo {
     width: 150px;
     height: auto;
-}
-.footer-branding .custom-logo {
-    width: 150px;
-    height: auto;
-}
-
-.footer-logo {
-    width: 150px;
-    height: auto;
-    display: block;
-}
-
-.primary-menu {
-    display: flex;
-    gap: 24px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .primary-menu {
@@ -87,9 +61,7 @@ body {
 }
 
 
-
-
-
+/* Footer */
 
 .site-footer {
     margin-top: 60px;
@@ -108,6 +80,12 @@ body {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 24px;
+}
+
+.footer-logo {
+    width: 150px;
+    height: auto;
+    display: block;
 }
 
 .footer-menu {
@@ -134,8 +112,7 @@ body {
 }
 
 
-
-
+/* Hero */
 
 .hero {
     min-height: 70vh;
@@ -175,8 +152,7 @@ body {
 }
 
 
-
-
+/* Services */
 
 .services {
     padding: 80px 20px;
@@ -217,9 +193,7 @@ body {
 }
 
 
-
-
-
+/* About */
 
 .about-section {
     padding: 80px 20px;
@@ -277,6 +251,7 @@ body {
 }
 
 
+/* Projects */
 
 .projects-section {
     padding: 80px 20px;
@@ -333,6 +308,9 @@ body {
     color: #555;
 }
 
+
+/* Projects Archive */
+
 .projects-archive {
     padding: 80px 24px;
 }
@@ -346,7 +324,7 @@ body {
 }
 
 
-
+/* CTA */
 
 .cta-section {
     padding: 80px 20px;
@@ -380,6 +358,8 @@ body {
 }
 
 
+/* Pages */
+
 .page-content {
     max-width: 900px;
     margin: 0 auto;
@@ -403,19 +383,12 @@ body {
 }
 
 
-
-
-
-
-
-
+/* Single Project */
 
 .single-project-page {
-   
     margin: 0;
     padding: 0;
     width: 100%;
-
 }
 
 .single-project {
@@ -451,17 +424,14 @@ body {
     line-height: 1.7;
     margin-bottom: 20px;
 }
-    
 
 
-
+/* Responsive */
 
 @media (max-width: 768px) {
 
-    .site-header {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+    .header-container {
+        flex-wrap: wrap;
     }
 
     .menu-toggle {
@@ -470,7 +440,7 @@ body {
 
     .main-navigation {
         display: none;
-         width: 100%;
+        width: 100%;
     }
 
     .main-navigation.is-open {
@@ -481,24 +451,12 @@ body {
         flex-direction: column;
         gap: 16px;
         padding-top: 20px;
-       
     }
-    
-    .header-container {
-    flex-wrap: wrap;
-}
-
-
-
 
     .footer-menu {
         flex-direction: column;
         gap: 12px;
     }
-
-
-
-
 
     .hero {
         min-height: 60vh;
@@ -513,52 +471,44 @@ body {
         font-size: 18px;
     }
 
-
-
-
     .services {
-    padding: 60px 20px;
-}
+        padding: 60px 20px;
+    }
 
-.section-heading h2 {
-    font-size: 32px;
-}
+    .section-heading h2 {
+        font-size: 32px;
+    }
 
-.services-grid {
-    grid-template-columns: 1fr;
-}
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .about-section {
+        padding: 60px 20px;
+    }
 
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 
-.about-section {
-    padding: 60px 20px;
-}
+    .about-content h2 {
+        font-size: 32px;
+    }
 
-.about-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
 
-.about-content h2 {
-    font-size: 32px;
-}
+    .projects-section {
+        padding: 60px 20px;
+    }
 
-.about-stats {
-    grid-template-columns: 1fr;
-}
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 
-
-.projects-section {
-    padding: 60px 20px;
-}
-
-.projects-grid {
-    grid-template-columns: 1fr;
-}
-
-
-
- .projects-archive {
+    .projects-archive {
         padding: 50px 20px;
     }
 
@@ -566,30 +516,24 @@ body {
         font-size: 36px;
     }
 
+    .cta-section {
+        padding: 60px 20px;
+    }
 
-.cta-section {
-    padding: 60px 20px;
-}
-
-.cta-container h2 {
-    font-size: 32px;
-}
-
+    .cta-container h2 {
+        font-size: 32px;
+    }
 
     .single-project h1 {
         padding: 40px 20px 0;
         font-size: 36px;
     }
-     .single-project-content {
+
+    .single-project-content {
         padding: 0 20px;
     }
 
     .single-project-image img {
         height: 300px;
     }
-
-
-
-
-    
 }

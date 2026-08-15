@@ -55,8 +55,8 @@ function nova_agency_register_projects() {
                 'singular_name' => 'Project'
             ),
              'public'      => true,
-        'has_archive' => 'projects',
-        'rewrite'     => array(
+             'has_archive' => 'projects',
+             'rewrite'     => array(
             'slug' => 'projects'
         ),
             'supports'    => array(
@@ -72,6 +72,26 @@ add_action(
     'init',
     'nova_agency_register_projects'
 );
+
+
+function nova_agency_dynamic_projects_menu_link( $items, $args ) {
+
+    if ( $args->theme_location === 'primary-menu' ) {
+
+        foreach ( $items as $item ) {
+
+            if ( $item->title === 'Projects' ) {
+                $item->url = get_post_type_archive_link( 'project' );
+            }
+
+        }
+
+    }
+
+    return $items;
+}
+
+add_filter( 'wp_nav_menu_objects', 'nova_agency_dynamic_projects_menu_link', 10, 2 );
 
 
 
