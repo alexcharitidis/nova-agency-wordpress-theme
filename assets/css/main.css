@@ -64,7 +64,6 @@ body {
 /* Footer */
 
 .site-footer {
-    margin-top: 60px;
     padding: 40px 0 20px;
     background: #111;
     color: #fff;
@@ -391,36 +390,36 @@ body {
     width: 100%;
 }
 
-.single-project {
+.single-project-page .single-project {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0;
 }
 
-.single-project h1 {
+.single-project-page .single-project h1 {
     font-size: 48px;
     margin-bottom: 32px;
     padding: 50px 20px 0;
 }
 
-.single-project-image {
+.single-project-page .single-project-image {
     width: 100%;
     margin-bottom: 40px;
     padding: 0 20px;
 }
 
-.single-project-image img {
+.single-project-page .single-project-image img {
     width: 100%;
     height: 500px;
     object-fit: cover;
     display: block;
 }
 
-.single-project-content {
+.single-project-page .single-project-content {
     max-width: 800px;
 }
 
-.single-project-content p {
+.single-project-page .single-project-content p {
     line-height: 1.7;
     margin-bottom: 20px;
 }
@@ -524,16 +523,16 @@ body {
         font-size: 32px;
     }
 
-    .single-project h1 {
+    .single-project-page .single-project h1 {
         padding: 40px 20px 0;
         font-size: 36px;
     }
 
-    .single-project-content {
+    .single-project-page .single-project-content {
         padding: 0 20px;
     }
 
-    .single-project-image img {
+    .single-project-page .single-project-image img {
         height: 300px;
     }
 }
